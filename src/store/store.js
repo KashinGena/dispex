@@ -1,11 +1,12 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import companyReducer from './reducers/company'
-// import pizzaReducer from './reducers/pizza'
+ import housesReducer from './reducers/houses'
 // import cartReducer from './reducers/cart'
 import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
-    companyReducer
+    companyReducer,
+    housesReducer
   
 })
 const composeEnhancers =

@@ -1,8 +1,8 @@
 import React from 'react'
 import CompanySelect from './components/CompanyList/CompanyList';
 import { fetchCompanies,selectCompany } from './store/actions/company';
-import axios from 'axios';
 import { useDispatch,useSelector } from 'react-redux';
+import HousesStock from './containers/HousesStock';
 
 function App() {
   const dispatch = useDispatch()
@@ -20,10 +20,11 @@ function App() {
   },[])
 
 
-  
+
   return (
     <div className="App">
       <CompanySelect onSelectCompany={onSelectCompanyHandler} companies={companies}/>
+      <HousesStock/>
     </div>
   );
 }
